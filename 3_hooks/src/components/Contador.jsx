@@ -28,8 +28,8 @@ function Contador() {
     <div>
         <p>Contagem: {estado.contador}</p>
         <button onClick={() => dispatch({tipo: "incrementar"})}>Incrementar</button>
-        <button onClick={() => dispatch({tipo: "decrementar"})}>Incrementar</button>
-        <button onClick={() => dispatch({tipo: "resetar"})}>Incrementar</button>
+        <button onClick={() => dispatch({tipo: "decrementar"})}>decrementar</button>
+        <button onClick={() => dispatch({tipo: "resetar"})}>resetar</button>
     </div>
   )
 }
