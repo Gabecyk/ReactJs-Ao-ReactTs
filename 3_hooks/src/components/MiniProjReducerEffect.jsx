@@ -11,7 +11,7 @@ function tarefasReducer(state, action) {
       return state.filter((tarefa) => tarefa.id !== action.payload);
     default:
       return state;
-  }
+  } 
 }
 
 // Componente principal
