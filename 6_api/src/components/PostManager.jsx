@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import PostForm from './PostForm'
+import { useNavigate } from 'react-router-dom'
 
 function PostManager() {
+    const navigate = useNavigate();
+
     const [posts, setPost] = useState([])
     const [error, setError] = useState("")
 
@@ -49,6 +52,8 @@ function PostManager() {
         }
     }
 
+   
+
     return (
         <div>
             <h1>Gerenciar posts</h1>
@@ -57,8 +62,8 @@ function PostManager() {
             <h2>Postagens</h2>
             {error ? (<p>Erro: {error}</p>) : (
                 posts.map((post) => (
-                    <div key={post.id}>
-                        <h2>{post.title}</h2>
+                    <div key={post.id} style={{background:"black"}}>
+                        <h2 style={{cursor: "pointer"}} onClick={(() => navigate(`/posts/view/${post.id}`))}>{post.title}</h2>
                         <p>{post.body}</p>
                         <button onClick={() => handleEdit(post)}>Editar</button>
                     </div>
