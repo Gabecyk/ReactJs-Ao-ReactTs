@@ -7,11 +7,13 @@ function Product({ product, onAddToCart }) {
   return (
     <div className='product'>
         <img src={product.image} alt={product.name} />
-        <h3>{product.title}</h3>
+        <h3>{product.name}</h3>
         <p>${product.price}</p>
         <div className='cart-buttons'>
-            <select name="" id="">
-                <option value="">1</option>
+            <select onChange={(e) => setQuantity(parseInt(e.target.value))}>
+                {[...Array(10).keys()].map((x) => (
+                    <option key={x + 1} value={x + 1}>{x + 1 }</option>
+                ))}
             </select>
             <button onClick={() => onAddToCart(product, quantity)}>
                 Adicionar ao carrinho

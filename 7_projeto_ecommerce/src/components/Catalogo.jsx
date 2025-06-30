@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React from 'react'
 import productsData from '../data/products_mock.json'
 import Product from './Product'
 
