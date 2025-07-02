@@ -39,3 +39,13 @@ const meuTodo: Todo = {
 const todoAtualizado = updateTodo(meuTodo, {completed: true})
 
 console.log(todoAtualizado)
+
+// Somente leitura
+const meuSegundoTodo: Readonly<Todo> = {
+    title: "teste",
+    description: "algo",
+    completed: true
+}
+
+// meuSegundoTodo.title = "Alterando", não deixa alterar pq é apenas readonly, apenas ler.
+
