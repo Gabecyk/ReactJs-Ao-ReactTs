@@ -3,6 +3,7 @@ import BarraFerramentas from './components/BarraFerramentas'
 import Contador from './components/Contador'
 import ContadorIntervalo from './components/ContadorIntervalo'
 import Counter from './components/Counter'
+import ExibirPostagens from './components/ExibirPostagens'
 import FormularioLogin from './components/FormularioLogin'
 import Greeting from './components/Greeting'
 import ListaDeCompras from './components/ListaDeCompras'
@@ -37,6 +38,8 @@ function App() {
       <TemaProvider>
           <BarraFerramentas />
       </TemaProvider>
+      {/* 8 - Requisição de API com Axios e TS */}
+      <ExibirPostagens />
     </>
   )
 }
