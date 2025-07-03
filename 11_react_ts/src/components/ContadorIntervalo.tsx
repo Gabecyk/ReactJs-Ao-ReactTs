@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useInterval from '../hooks/useInterval'
 import { useContador } from '../hooks/useContador';
 
-const ContadorIntervalo: React.FC = () => {
+const ContadorIntervalo = () => {
 
     const [contador, setContador] = useState<number>(0);
     const { count, incrementar, decrementar, resetar } = useContador(10);

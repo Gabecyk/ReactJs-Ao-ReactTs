@@ -1,8 +1,14 @@
 import './App.css'
+import BarraFerramentas from './components/BarraFerramentas'
+import Contador from './components/Contador'
 import ContadorIntervalo from './components/ContadorIntervalo'
 import Counter from './components/Counter'
+import FormularioLogin from './components/FormularioLogin'
 import Greeting from './components/Greeting'
+import ListaDeCompras from './components/ListaDeCompras'
+import LocalStorageEx from './components/LocalStorageEx'
 import TextInput from './components/TextInput'
+import { TemaProvider } from './context/TemaContext'
 
 function App() {
 
@@ -18,6 +24,19 @@ function App() {
       <TextInput />
       {/* 4 - Custom hooks com TS */}
       <ContadorIntervalo />
+      {/* 5 - Exercícios */}
+      {/* Ex1 */}
+      <FormularioLogin />
+      {/* Ex2 */}
+      <ListaDeCompras />
+      {/* Ex3 */}
+      <LocalStorageEx />
+      {/* 6 - Reducer */}
+      <Contador />
+      {/* 7 - Context API com TS */}
+      <TemaProvider>
+          <BarraFerramentas />
+      </TemaProvider>
     </>
   )
 }
